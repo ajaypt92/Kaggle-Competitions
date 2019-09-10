@@ -282,8 +282,8 @@ def main():
     save_model = False
     create_visualizations = True
     create_submission_file = False
-    code_dir = '/home/john/git/kaggle/HiggsBoson/'
-    data_dir = '/home/john/data/higgs-boson/'
+    code_dir = '/home/ajay/git/kaggle/HiggsBoson/'
+    data_dir = '/home/ajay/data/higgs-boson/'
     training_file = 'training.csv'
     test_file = 'test.csv'
     submit_file = 'submission.csv'
