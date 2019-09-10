@@ -1,5 +1,15 @@
+'''
+This python file is used for doing following things:
+
+1. Creating training and validation data set from user reviews.
+2. Create a bag of words from the training set.
+3. Displaying and saving layer activations for first 100 layers on a test image.
+4. Displaying and saving layer filters for few convolution layers
+5. Displaying and saving heatmaps for test images.
+'''
+
 import sys
-sys.path.append('/home/john/git/kaggle/BagOfPopcorn/')
+sys.path.append('/home/ajay/git/kaggle/BagOfPopcorn/')
 
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
@@ -8,7 +18,16 @@ from old.Word2Vec.kaggle_utility import KaggleUtility
 
 
 def main():
-    data_dir = '/home/john/data/bag-of-popcorn/'
+    
+    #-------------------
+    #Declaring constants
+    #-------------------
+
+    data_dir = '/home/ajay/data/bag-of-popcorn/'
+
+    #-----------------------------------------------------------------------------------
+    #Creating train and validation data
+    #-----------------------------------------------------------------------------------
 
     train = pd.read_csv(data_dir + 'labeledTrainData.tsv', header=0, delimiter='\t', quoting=3)
     test = pd.read_csv(data_dir + 'testData.tsv', header=0, delimiter='\t', quoting=3)
@@ -24,14 +43,18 @@ def main():
     # Initialize an empty list to hold the clean reviews
     clean_train_reviews = []
 
+    #-----------------------------------------------------------------------------------
     # Loop over each review; create an index i that goes from 0 to the length
     # of the movie review list
+    #-----------------------------------------------------------------------------------
 
     print 'Cleaning and parsing the training set movie reviews...\n'
     for i in xrange(0, len(train['review'])):
         clean_train_reviews.append(' '.join(KaggleUtility.review_to_wordlist(train['review'][i], True)))
-
+    
+    #-----------------------------------------------------------------------------------
     # Create a bag of words from the training set
+    #-----------------------------------------------------------------------------------
 
     print 'Creating the bag of words...\n'
 
@@ -55,8 +78,10 @@ def main():
     # Initialize a Random Forest classifier with 100 trees
     forest = RandomForestClassifier(n_estimators=100)
 
+    #-----------------------------------------------------------------------------------
     # Fit the forest to the training set, using the bag of words as
     # features and the sentiment labels as the response variable
+    #-----------------------------------------------------------------------------------
 
     # This may take a few minutes to run
     forest = forest.fit(train_data_features, train['sentiment'])
