@@ -1,12 +1,12 @@
 from __future__ import print_function
 import sys
-sys.path.append('/home/john/git/kaggle/NerveSegmentation/')
+sys.path.append('/home/ajay/git/kaggle/NerveSegmentation/')
 
 import numpy as np
 import cv2
 from data import image_cols, image_rows
 
-data_path = '/home/john/data/nerve-segmentation/'
+data_path = '/home/ajay/data/nerve-segmentation/'
 
 
 def prep(img):
