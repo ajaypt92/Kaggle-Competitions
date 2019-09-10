@@ -3,7 +3,7 @@ import os
 import numpy as np
 import cv2
 
-data_path = '/home/john/data/nerve-segmentation/'
+data_path = '/home/ajay/data/nerve-segmentation/'
 image_rows = 420
 image_cols = 580
 
