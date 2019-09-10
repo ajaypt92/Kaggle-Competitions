@@ -1,6 +1,6 @@
 from __future__ import print_function
 import sys
-sys.path.append('/home/john/git/kaggle/NerveSegmentation/')
+sys.path.append('/home/ajay/git/kaggle/NerveSegmentation/')
 
 import cv2
 import numpy as np
@@ -11,7 +11,7 @@ from keras.callbacks import ModelCheckpoint
 from keras import backend as K
 from data import load_train_data, load_test_data
 
-data_path = '/home/john/data/nerve-segmentation/'
+data_path = '/home/ajay/data/nerve-segmentation/'
 img_rows = 64
 img_cols = 80
 smooth = 1.
