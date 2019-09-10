@@ -3,9 +3,9 @@ This python file is used for doing following things:
 
 1. Creating training and validation data set from user reviews.
 2. Create a bag of words from the training set.
-3. Displaying and saving layer activations for first 100 layers on a test image.
-4. Displaying and saving layer filters for few convolution layers
-5. Displaying and saving heatmaps for test images.
+3. Create Word vector.
+4. Train random forest on training data
+5. Predict on validation data.
 '''
 
 import sys
