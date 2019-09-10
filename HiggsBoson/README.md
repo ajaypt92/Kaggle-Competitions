@@ -1,7 +1,5 @@
 # Higgs Boson Machine Learning Challenge
 
-<img src="https://kaggle2.blob.core.windows.net/competitions/kaggle/3887/media/ATLASEXP_image.png" alt="ATLAS" title="ATLAS" />
-
 <a href="http://www.kaggle.com/c/higgs-boson">View the competition details here.</a><br/>
 
 This directory includes the code I used to run experiments for the competition.  Despite starting only a few weeks before the deadline and having very limited time to invest, I managed to place in the top 25%.<br/>
